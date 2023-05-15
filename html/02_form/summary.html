@@ -156,8 +156,8 @@
   			*/
   			
   			// 자바스크립트
-  			document.getElementsByClassName("somsom").selected == true
-  			alert("앗 전산상의 오류가 있었습니다! 사실 오늘 저녁은 " + select_bar[2].value + "가 쏩니다.");
+  			/* document.getElementsByClassName("somsom").selected == true
+  			alert("앗 전산상의 오류가 있었습니다! 사실 오늘 저녁은 " + select_bar[2].value + "가 쏩니다."); */
   			
   			
   			
@@ -165,7 +165,7 @@
    			// var obj_length = document.getElementsByName("gender").length;
   			var obj_length = $("input[name='gender']").length;
   			
-  			/* for(var i = 0; i < obj_length; i++) {
+  			for(var i = 0; i < obj_length; i++) {
   				if ( $("input[name='gender']").eq(i).prop("checked") ) {
   					alert( $("input[name='gender']").eq(i).attr("value") );
   					arrayGender.push( $("input[name='gender']").eq(i).attr("value") );
@@ -173,7 +173,7 @@
   			}
   			
   			$("input[name='gender']").eq(0).prop("checked", false);
-  			$("input[name='gender']").eq(2).prop("checked", true); */
+  			$("input[name='gender']").eq(2).prop("checked", true);
   			
   			
   			/* for(var i = 0; i < obj_length; i++) {
@@ -186,8 +186,8 @@
   			document.getElementsByName("gender")[0].checked = false;
   			document.getElementsByName("gender")[2].checked = true; */
   			
-  			/* alert( document.querySelector("input[name='telecom']:checked").value );
-  			document.getElementsByName("telecom")[2].checked = true; */
+  			alert( document.querySelector("input[name='telecom']:checked").value );
+  			document.getElementsByName("telecom")[2].checked = true;
   		})
   		
   		/* select_bar.on("change", function(){
