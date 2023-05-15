@@ -123,36 +123,65 @@
   		
   		btn.click(function(){
   			// 아이디, 패스워드
+  			
+  			/* 제이쿼리
   			var id = $("#id").val();
   			var pw = $("#password").val();
-  			var pw_02 = $("#password_02").val();
+  			var pw_02 = $("#password_02").val(); */
   			
-  			 /* if ( id == null || id == "" ) {
+  			// 자바스크립트
+  			/* var id = document.getElementById("id").value;
+  			var pw = document.getElementById("password").value;
+  			var pw_02 = document.getElementById("password_02").value;
+  			
+  			 if ( id == null || id == "" ) {
   				alert("null 입니다.")
   			} else {
   				alert("null 이 아닙니다.")
-  			}  */
+  			} 
   			
-  			/* if ( pw != pw_02 ) {
+  			if ( pw != pw_02 ) {
   				alert("비밀번호가 다릅니다.");
   			} else {
   				alert("비밀번호를 설정합니다.");
-  			}
-  			 */
+  			} */
   			
-  			/* select_bar.val("somsom").prop("seleted", true);
-  			alert("앗 전산상의 오류가 있었습니다! 사실 오늘 저녁은 " + select_bar.val() + "가 쏩니다.") */
+  			 
+  			 
+  			
+  			/* 제이쿼리
+  			select_bar.val("somsom").prop("selected", true);
+  			alert("앗 전산상의 오류가 있었습니다! 사실 오늘 저녁은 " + select_bar.val() + "가 쏩니다.")
+  			*/
+  			
+  			// 자바스크립트
+  			select_bar.querySelector(["option[value='somsom']:checked"]).prop("selected", true)
+  			alert("앗 전산상의 오류가 있었습니다! 사실 오늘 저녁은 " + querySelector(["option[value='somsom']:checked"]) + "가 쏩니다.");
+  			
   			
   			var arrayGender = new Array();
-  			var obj_length = $(".gender").length;
+  			var obj_length = document.getElementsByName("gender").length;
   			
-  			for(var i = 0; i < obj_length; i++) {
-  				if ( $('input[name|="gender"]')[i] == checked ) {
-  					alert( $('input[name="gender"]').val(i) );
-  					array.push( gender[i].val() );
+  			/* for(var i = 0; i < obj_length; i++) {
+  				if ( $("input[name='gender']:eq(" + i + ")").prop("checked") ) {
+  					alert( $("input[name='gender']:eq(" + i + ")").val() );
+  					console.log($("input[name='gender']:eq(" + i + ")"))
+  					arrayGender.push( $("input[name='gender']:eq(" + i + ")").val() );
+  				}
+  			} */
+  			
+  			/* for(var i = 0; i < obj_length; i++) {
+  				if ( document.getElementsByName("gender")[i].checked == true) {
+  					alert(document.getElementsByName("gender")[i].value);
+  					arrayGender.push(document.getElementsByName("gender")[i].value);
   				}
   			}
   			
+  			document.getElementsByName("gender")[0].checked = false;
+  			document.getElementsByName("gender")[2].checked = true; */
+  			
+  			alert( document.querySelector("input[name='telecom']:checked").value );
+  			document.getElementsByName("telecom")[2].checked = true;
   		})
   		
   		/* select_bar.on("change", function(){
